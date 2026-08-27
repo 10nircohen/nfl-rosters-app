@@ -11,14 +11,23 @@ package com.example.nflteams
  * "logo_buf") for a real logo image dropped into res/drawable. If set and
  * the resource exists, the adapter shows that image instead of the
  * generated badge.
+ *
+ * [espnAbbr] is the team code ESPN uses in its depth-chart URLs. It's
+ * usually just the lowercase [abbr], EXCEPT Washington, where ESPN uses
+ * "wsh" instead of "was" — so this field lets us override that one case.
  */
 data class Team(
     val name: String,
     val abbr: String,
     val conference: String, // "AFC" or "NFC"
     val color: String,       // hex color, e.g. "#013369"
-    val logoRes: String? = null
-)
+    val logoRes: String? = null,
+    val espnAbbr: String? = null
+) {
+    /** ESPN depth chart URL for this team, e.g. .../name/buf */
+    val depthChartUrl: String
+        get() = "https://www.espn.com/nfl/team/depth/_/name/${espnAbbr ?: abbr.lowercase()}"
+}
 
 object TeamRepository {
 
@@ -51,7 +60,7 @@ object TeamRepository {
         Team("Dallas Cowboys", "DAL", "NFC", "#003594"),
         Team("New York Giants", "NYG", "NFC", "#0B2265"),
         Team("Philadelphia Eagles", "PHI", "NFC", "#004C54"),
-        Team("Washington Commanders", "WAS", "NFC", "#5A1414"),
+        Team("Washington Commanders", "WAS", "NFC", "#5A1414", espnAbbr = "wsh"),
 
         // NFC North
         Team("Chicago Bears", "CHI", "NFC", "#0B162A"),

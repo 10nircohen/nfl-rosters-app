@@ -1,5 +1,8 @@
 package com.example.nflteams
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +18,16 @@ class MainActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerTeams)
         recyclerView.layoutManager = GridLayoutManager(this, 4)
         recyclerView.adapter = TeamAdapter(TeamRepository.teams) { team ->
-            Toast.makeText(this, "${team.name} (${team.conference})", Toast.LENGTH_SHORT).show()
+            openDepthChart(team.depthChartUrl)
+        }
+    }
+
+    private fun openDepthChart(url: String) {
+        try {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(this, "No browser app found to open the link", Toast.LENGTH_SHORT).show()
         }
     }
 }
