@@ -39,22 +39,22 @@ object TeamRepository {
         Team("New York Jets", "NYJ", "AFC", "#125740", logoRes = "logo_nyj"),
 
         // AFC North
-        Team("Baltimore Ravens", "BAL", "AFC", "#241773"),
-        Team("Cincinnati Bengals", "CIN", "AFC", "#FB4F14"),
-        Team("Cleveland Browns", "CLE", "AFC", "#311D00"),
-        Team("Pittsburgh Steelers", "PIT", "AFC", "#FFB612"),
+        Team("Baltimore Ravens", "BAL", "AFC", "#241773", logoRes = "logo_bal"),
+        Team("Cincinnati Bengals", "CIN", "AFC", "#FB4F14", logoRes = "logo_cin"),
+        Team("Cleveland Browns", "CLE", "AFC", "#311D00", logoRes = "logo_cle"),
+        Team("Pittsburgh Steelers", "PIT", "AFC", "#FFB612", logoRes = "logo_pit"),
 
         // AFC South
-        Team("Houston Texans", "HOU", "AFC", "#03202F"),
-        Team("Indianapolis Colts", "IND", "AFC", "#002C5F"),
-        Team("Jacksonville Jaguars", "JAX", "AFC", "#101820"),
-        Team("Tennessee Titans", "TEN", "AFC", "#0C2340"),
+        Team("Houston Texans", "HOU", "AFC", "#03202F", logoRes = "logo_hou"),
+        Team("Indianapolis Colts", "IND", "AFC", "#002C5F", logoRes = "logo_ind"),
+        Team("Jacksonville Jaguars", "JAX", "AFC", "#101820", logoRes = "logo_jax"),
+        Team("Tennessee Titans", "TEN", "AFC", "#0C2340", logoRes = "logo_ten"),
 
         // AFC West
-        Team("Denver Broncos", "DEN", "AFC", "#FB4F14"),
-        Team("Kansas City Chiefs", "KC", "AFC", "#E31837"),
-        Team("Las Vegas Raiders", "LV", "AFC", "#000000"),
-        Team("Los Angeles Chargers", "LAC", "AFC", "#0080C6"),
+        Team("Denver Broncos", "DEN", "AFC", "#FB4F14", logoRes = "logo_den"),
+        Team("Kansas City Chiefs", "KC", "AFC", "#E31837", logoRes = "logo_kc"),
+        Team("Las Vegas Raiders", "LV", "AFC", "#000000", logoRes = "logo_lvr"),
+        Team("Los Angeles Chargers", "LAC", "AFC", "#0080C6", logoRes = "logo_lac"),
 
         // NFC East
         Team("Dallas Cowboys", "DAL", "NFC", "#003594"),
