@@ -3,24 +3,28 @@ package com.example.nflteams
 /**
  * Simple data model for an NFL team.
  *
- * Note: [color] is the team's official primary color, used to render a
- * generated badge thumbnail (colored circle + abbreviation). Actual team
- * logo artwork is trademarked, so this app does not bundle logo images —
- * swap `logoBadge` in item_team.xml for an ImageView if you have licensed
- * logo assets to drop in under res/drawable.
+ * [color] is the team's official primary color, used to render a generated
+ * badge thumbnail (colored circle + abbreviation) when no real logo image
+ * is supplied.
+ *
+ * [logoRes] is an OPTIONAL drawable resource name (no extension, e.g.
+ * "logo_buf") for a real logo image dropped into res/drawable. If set and
+ * the resource exists, the adapter shows that image instead of the
+ * generated badge.
  */
 data class Team(
     val name: String,
     val abbr: String,
     val conference: String, // "AFC" or "NFC"
-    val color: String        // hex color, e.g. "#013369"
+    val color: String,       // hex color, e.g. "#013369"
+    val logoRes: String? = null
 )
 
 object TeamRepository {
 
     val teams: List<Team> = listOf(
         // AFC East
-        Team("Buffalo Bills", "BUF", "AFC", "#00338D"),
+        Team("Buffalo Bills", "BUF", "AFC", "#00338D", logoRes = "logo_buf"),
         Team("Miami Dolphins", "MIA", "AFC", "#008E97"),
         Team("New England Patriots", "NE", "AFC", "#002244"),
         Team("New York Jets", "NYJ", "AFC", "#125740"),

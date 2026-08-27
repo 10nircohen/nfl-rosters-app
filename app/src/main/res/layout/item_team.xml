@@ -18,26 +18,43 @@
         android:paddingStart="4dp"
         android:paddingEnd="4dp">
 
-        <FrameLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="64dp"
-            android:layout_height="64dp">
+            android:layout_height="64dp"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#FFFFFF">
 
-            <View
-                android:id="@+id/logoBadge"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/circle_background" />
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tvAbbr"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="ABC"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </FrameLayout>
+                <View
+                    android:id="@+id/logoBadge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle_background" />
+
+                <TextView
+                    android:id="@+id/tvAbbr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="ABC"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    android:contentDescription="@null" />
+
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/tvName"
