@@ -57,27 +57,27 @@ object TeamRepository {
         Team("Los Angeles Chargers", "LAC", "AFC", "#0080C6", logoRes = "logo_lac"),
 
         // NFC East
-        Team("Dallas Cowboys", "DAL", "NFC", "#003594"),
-        Team("New York Giants", "NYG", "NFC", "#0B2265"),
-        Team("Philadelphia Eagles", "PHI", "NFC", "#004C54"),
-        Team("Washington Commanders", "WAS", "NFC", "#5A1414", espnAbbr = "wsh"),
+        Team("Dallas Cowboys", "DAL", "NFC", "#003594", logoRes = "logo_dal"),
+        Team("New York Giants", "NYG", "NFC", "#0B2265", logoRes = "logo_nyg"),
+        Team("Philadelphia Eagles", "PHI", "NFC", "#004C54", logoRes = "logo_phi"),
+        Team("Washington Commanders", "WAS", "NFC", "#5A1414", espnAbbr = "wsh", logoRes = "logo_was"),
 
         // NFC North
-        Team("Chicago Bears", "CHI", "NFC", "#0B162A"),
-        Team("Detroit Lions", "DET", "NFC", "#0076B6"),
-        Team("Green Bay Packers", "GB", "NFC", "#203731"),
-        Team("Minnesota Vikings", "MIN", "NFC", "#4F2683"),
+        Team("Chicago Bears", "CHI", "NFC", "#0B162A", logoRes = "logo_chi"),
+        Team("Detroit Lions", "DET", "NFC", "#0076B6", logoRes = "logo_det"),
+        Team("Green Bay Packers", "GB", "NFC", "#203731", logoRes = "logo_gb"),
+        Team("Minnesota Vikings", "MIN", "NFC", "#4F2683", logoRes = "logo_min"),
 
         // NFC South
-        Team("Atlanta Falcons", "ATL", "NFC", "#A71930"),
-        Team("Carolina Panthers", "CAR", "NFC", "#0085CA"),
-        Team("New Orleans Saints", "NO", "NFC", "#D3BC8D"),
-        Team("Tampa Bay Buccaneers", "TB", "NFC", "#D50A0A"),
+        Team("Atlanta Falcons", "ATL", "NFC", "#A71930", logoRes = "logo_atl"),
+        Team("Carolina Panthers", "CAR", "NFC", "#0085CA", logoRes = "logo_car"),
+        Team("New Orleans Saints", "NO", "NFC", "#D3BC8D", logoRes = "logo_no"),
+        Team("Tampa Bay Buccaneers", "TB", "NFC", "#D50A0A", logoRes = "logo_tb"),
 
         // NFC West
-        Team("Arizona Cardinals", "ARI", "NFC", "#97233F"),
-        Team("Los Angeles Rams", "LAR", "NFC", "#003594"),
-        Team("San Francisco 49ers", "SF", "NFC", "#AA0000"),
-        Team("Seattle Seahawks", "SEA", "NFC", "#002244")
+        Team("Arizona Cardinals", "ARI", "NFC", "#97233F", logoRes = "logo_ari"),
+        Team("Los Angeles Rams", "LAR", "NFC", "#003594", logoRes = "logo_lar"),
+        Team("San Francisco 49ers", "SF", "NFC", "#AA0000", logoRes = "logo_sf"),
+        Team("Seattle Seahawks", "SEA", "NFC", "#002244", logoRes = "logo_sea")
     )
 }
