@@ -25,9 +25,9 @@ object TeamRepository {
     val teams: List<Team> = listOf(
         // AFC East
         Team("Buffalo Bills", "BUF", "AFC", "#00338D", logoRes = "logo_buf"),
-        Team("Miami Dolphins", "MIA", "AFC", "#008E97"),
-        Team("New England Patriots", "NE", "AFC", "#002244"),
-        Team("New York Jets", "NYJ", "AFC", "#125740"),
+        Team("Miami Dolphins", "MIA", "AFC", "#008E97", logoRes = "logo_mia"),
+        Team("New England Patriots", "NE", "AFC", "#002244", logoRes = "logo_ne"),
+        Team("New York Jets", "NYJ", "AFC", "#125740", logoRes = "logo_nyj"),
 
         // AFC North
         Team("Baltimore Ravens", "BAL", "AFC", "#241773"),
